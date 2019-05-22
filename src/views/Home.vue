@@ -1,18 +1,37 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+#home
+  Cover
+  About
+  Skills
+  Portfolio
+  Menu
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Cover from '@/views/Cover'
+import About from '@/views/About'
+import Skills from '@/views/Skills'
+import Portfolio from '@/views/Portfolio'
+import Menu from '@/components/Menu'
 
 export default {
-  name: 'home',
   components: {
-    HelloWorld
+    Cover, About, Skills, Portfolio, Menu
   }
 }
 </script>
+
+<style lang="sass">
+@import "@/styles/global.sass"
+
+// ====================
+//      MAIN
+// ==============================
+#home
+  width: 100%
+  min-height: 100vh
+  padding: 5vw 0
+  +center_flex
+  flex-direction: column
+  overflow: hidden
+</style>
